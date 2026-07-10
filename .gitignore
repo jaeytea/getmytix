@@ -1,0 +1,66 @@
+# ==========================
+# React Frontend
+# ==========================
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/coverage/
+
+# React environment files
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# ==========================
+# Spring Boot Backend
+# ==========================
+backend/target/
+backend/build/
+backend/.gradle/
+backend/out/
+
+# Maven
+backend/.mvn/timing.properties
+
+# Generated artifacts
+backend/*.jar
+backend/*.war
+backend/*.ear
+backend/*.class
+
+# Backend environment
+backend/.env
+backend/.env.*
+
+# ==========================
+# IDEs
+# ==========================
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# ==========================
+# Logs
+# ==========================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Temporary Files
+# ==========================
+*.swp
+*.swo
+*~
