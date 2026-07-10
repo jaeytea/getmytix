@@ -49,8 +49,21 @@ getmytix/
 
 ```bash
 psql -U postgres -c "CREATE DATABASE getmytix;"
+```
+
+Then start the backend and let Flyway apply the migrations automatically from:
+
+```text
+backend/src/main/resources/db/migration/
+```
+
+If you want a fresh local database with seed data, you can still run the initial schema script once:
+
+```bash
 psql -U postgres -d getmytix -f backend/src/main/resources/schema.sql
 ```
+
+For an existing database, use the migration files instead of re-running the whole schema script.
 
 ### 2. Backend
 

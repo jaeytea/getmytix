@@ -150,7 +150,7 @@ export default function LandingPage() {
                 fullWidth
                 sx={{ py: 1.5, fontSize: "1.1rem" }}
               >
-                Browse Events →
+                Enter Arena →
               </Button>
             </Stack>
           </Box>

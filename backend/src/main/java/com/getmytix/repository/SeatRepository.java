@@ -18,10 +18,9 @@ import java.util.Optional;
 @Repository
 public interface SeatRepository extends JpaRepository<Seat, Long> {
 
-    /** All seats for a given event (used by seat-map endpoint). */
+
     List<Seat> findByEventIdOrderByRowLabelAscSeatNumberAsc(Long eventId);
 
-    /** Count available seats for an event (used by Event list). */
     long countByEventIdAndStatus(Long eventId, SeatStatus status);
 
     /** Random available seats – used by BotScheduler to simulate demand. */

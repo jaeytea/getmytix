@@ -70,33 +70,33 @@ CREATE INDEX idx_bookings_user      ON bookings(user_name);
 INSERT INTO events (name, venue, event_date, description, image_url, total_seats, available_seats) VALUES
 (
     'Arctic Monkeys — Live',
-    'DY Patil Stadium, Mumbai',
-    '2025-11-15 20:00:00',
+    'MMRDA Grounds, Mumbai',
+    '2027-11-15 20:00:00',
     'The Sheffield legends return to India for one unforgettable night. Expect all the classics and surprises from their latest album.',
     'https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=800',
     60, 60
 ),
 (
-    'Tech Summit 2025',
+    'AI Tech Summit 2027',
     'Bharat Mandapam, New Delhi',
-    '2025-12-05 09:00:00',
+    '2027-12-05 09:00:00',
     'India''s largest technology conference with 120+ speakers covering AI, Cloud, Blockchain and the future of engineering.',
     'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800',
     60, 60
 ),
 (
     'IPL Final — MI vs CSK',
-    'Narendra Modi Stadium, Ahmedabad',
-    '2025-11-28 19:30:00',
+    'DY Patil Stadium, Mumbai',
+    '2027-11-28 19:30:00',
     'The most anticipated cricket final of the decade. Two titans clash for the ultimate crown in front of 132,000 screaming fans.',
     'https://en.wikipedia.org/wiki/Future_Nostalgia_Tour#/media/File:Future_Nostalgia_Tour_poster.png',
     60, 60
 ),
 (
     'Dua Lipa — Future Nostalgia Tour',
-    'Jawaharlal Nehru Stadium, Delhi',
-    '2025-12-20 21:00:00',
-    'Pop powerhouse Dua Lipa brings her critically acclaimed Future Nostalgia Tour to India for the very first time.',
+    'Stanford Stadium, California',
+    '2027-12-20 21:00:00',
+    'Pop powerhouse Dua Lipa brings her critically acclaimed Future Nostalgia Tour for the very first time.',
     'https://images.unsplash.com/photo-1501386761578-eee0face-1400?w=800',
     60, 60
 );
