@@ -26,7 +26,9 @@ public class EventController {
 
     @GetMapping
     public ResponseEntity<List<EventDTO>> listEvents() {
+        System.out.println("This is list of events fetched");
         return ResponseEntity.ok(eventService.getAllEvents());
+
     }
 
     @GetMapping("/{id}")
