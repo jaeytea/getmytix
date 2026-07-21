@@ -234,7 +234,7 @@ export default function EventsPage() {
   useEffect(() => {
     getEvents()
       .then(setEvents)
-      .catch(() => setError("Could not load events – is the backend running?"))
+      .catch(() => setError("Could not load events – server down?"))
       .finally(() => setLoading(false));
   }, []);
 
@@ -251,6 +251,11 @@ export default function EventsPage() {
     if (ratio > 0.5) return "success";
     if (ratio > 0.15) return "warning";
     return "error";
+  };
+
+  const handleRefresh = async () => {
+    await fetch("/api/admin/reset-seats", { method: "POST" });
+    window.location.reload();
   };
 
   return (
@@ -277,6 +282,7 @@ export default function EventsPage() {
             GetMyTix
           </Typography>
         </Stack>
+
         <Typography variant="body2" color="text.secondary">
           Hey, <strong style={{ color: "#F0F0F8" }}>{userName}</strong> ! :D
         </Typography>
@@ -289,6 +295,15 @@ export default function EventsPage() {
             Select an event to join the queue. Seats are selling fast — act
             quickly!
           </Typography>
+          <Button
+            variant="outlined"
+            color="inherit"
+            onClick={handleRefresh}
+            float="right"
+            sx={{ mr: 2, width: "fit-content", mt: 1 }}
+          >
+            Refresh
+          </Button>
         </Stack>
 
         {loading && (
