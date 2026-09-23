@@ -17,6 +17,7 @@ import QueueIcon from "@mui/icons-material/Queue";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { format } from "date-fns";
 import useStore from "../store/useStore";
+import api from "../api/client";
 
 export default function SuccessPage() {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ export default function SuccessPage() {
   };
 
   const handleTryAgain = async () => {
-    await fetch("/api/admin/reset-seats", { method: "POST" });
+    await api.post("/admin/reset-seats");
     window.location.reload();
   };
 

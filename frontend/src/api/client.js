@@ -5,13 +5,13 @@ const api = axios.create({
   headers: { "Content-Type": "application/json" },
 });
 
-// ─── Events ───────────────────────────────────────────────────────────────
+//  Events
 
 export const getEvents = () => api.get("/events").then((r) => r.data);
 
 export const getEvent = (id) => api.get(`/events/${id}`).then((r) => r.data);
 
-// ─── Seats ────────────────────────────────────────────────────────────────
+//  Seats
 
 export const getSeats = (eventId) =>
   api.get(`/events/${eventId}/seats`).then((r) => r.data);
@@ -24,7 +24,7 @@ export const extendCheckoutLocks = (seatIds, userName) =>
     .patch("/checkout/extend-locks", { seatIds, userName })
     .then((r) => r.data);
 
-// ─── Queue ────────────────────────────────────────────────────────────────
+//  Queue
 
 export const joinQueue = (eventId, userName) =>
   api.post("/queue/join", { eventId, userName }).then((r) => r.data);
@@ -35,7 +35,7 @@ export const getQueueStatus = (queueEntryId) =>
 export const admitToSeats = (queueEntryId) =>
   api.post(`/queue/${queueEntryId}/admit`).then((r) => r.data);
 
-// ─── Bookings ─────────────────────────────────────────────────────────────
+//  Bookings
 
 /**
  * @param {object} payload
